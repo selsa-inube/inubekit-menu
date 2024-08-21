@@ -1,3 +1,16 @@
+# v1.2.1 (Wed Aug 21 2024)
+
+#### ⚠️ Pushed to `main`
+
+- Update package.json ([@cmarin001](https://github.com/cmarin001))
+- Create update-stack.yml ([@cmarin001](https://github.com/cmarin001))
+
+#### Authors: 1
+
+- Cesar Marin Alfonso ([@cmarin001](https://github.com/cmarin001))
+
+---
+
 # v1.2.0 (Wed Aug 21 2024)
 
 #### 🚀 Enhancement
