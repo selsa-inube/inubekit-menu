@@ -1,4 +1,4 @@
-import { inube } from "@inubekit/foundations";
+import { tokens } from "./Tokens/tokens";
 import styled from "styled-components";
 
 const StyledMenuContainer = styled.div`
@@ -8,7 +8,7 @@ const StyledMenuContainer = styled.div`
   box-shadow: 0px 2px 3px 0px #091e4221;
   box-shadow: 0px 6px 10px 4px #091e4221;
   background-color: ${({ theme }) =>
-    theme?.menu?.background?.color || inube.menu.background.color};
+    theme?.menu?.background?.color || tokens.background.color};
 `;
 
 export { StyledMenuContainer };
