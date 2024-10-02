@@ -1,3 +1,15 @@
+# v1.11.0 (Wed Oct 02 2024)
+
+#### 🚀 Enhancement
+
+- Refactor `<MenuItem/>` to `<MenuLink/>` and Implement `<MenuAction/>` Subcomponent [#18](https://github.com/selsa-inube/inubekit-menu/pull/18) ([@cmarin001](https://github.com/cmarin001))
+
+#### Authors: 1
+
+- Cesar Marin Alfonso ([@cmarin001](https://github.com/cmarin001))
+
+---
+
 # v1.10.1 (Wed Oct 02 2024)
 
 #### ⚠️ Pushed to `main`
