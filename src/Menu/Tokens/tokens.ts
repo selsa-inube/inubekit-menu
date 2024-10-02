@@ -23,9 +23,6 @@ const tokens = {
   background: {
     color: inube.palette.neutral.N0,
   },
-  divider: {
-    color: inube.palette.neutral.N40,
-  },
 };
 
 export { tokens };
