@@ -1,5 +1,5 @@
 import { MenuHeading } from "../MenuHeading";
-import { MenuItem } from "../MenuItem";
+import { MenuLink } from "../MenuLink";
 import { Divider } from "@inubekit/divider";
 import { Stack } from "@inubekit/stack";
 import { ISection } from "./props";
@@ -26,7 +26,7 @@ function MenuSection(props: IMenuSection) {
           {section.title && <MenuHeading title={section.title} />}
           <Stack direction="column" gap={spacing === "compact" ? "4px" : "0px"}>
             {section.links.map((link, linkIndex) => (
-              <MenuItem
+              <MenuLink
                 key={linkIndex}
                 title={link.title}
                 description={link.description}

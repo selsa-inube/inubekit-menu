@@ -1,4 +1,4 @@
-import { IMenuItem } from "../MenuItem";
+import { IMenuItem } from "../MenuLink";
 
 interface ISection {
   title?: string;

@@ -1,4 +1,4 @@
-import { menuItemSpacing } from "./MenuItem/props";
+import { menuLinkSpacing } from "./MenuLink/props";
 
 const props = {
   userName: {
@@ -18,7 +18,7 @@ const props = {
       "A boolean indicating whether an avatar should be displayed for the user in the MenuUser component. This is optional.",
   },
   spacing: {
-    options: menuItemSpacing,
+    options: menuLinkSpacing,
     control: { type: "select" },
     description:
       "The type of spacing to be used for the items in the MenuSection component. This is of type MenuItemSpacingType. This is optional.",

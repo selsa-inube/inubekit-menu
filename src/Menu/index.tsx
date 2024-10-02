@@ -2,14 +2,14 @@ import { MenuUser } from "./MenuUser";
 import { MenuSection } from "./MenuSection";
 import { ISection } from "./MenuSection/props";
 import { StyledMenuContainer } from "./styles";
-import { MenuItemSpacingType } from "./MenuItem/props";
+import { MenuActionSpacingType } from "./MenuAction/props";
 
 interface IMenu {
   userName: string;
   sections: ISection[];
   businessUnit?: string;
   avatar?: boolean;
-  spacing?: MenuItemSpacingType;
+  spacing?: MenuActionSpacingType;
 }
 
 function Menu(props: IMenu) {
