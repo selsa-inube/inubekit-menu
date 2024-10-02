@@ -1,6 +1,6 @@
-const menuItemSpacing = ["wide", "compact"] as const;
+const menuActionSpacing = ["wide", "compact"] as const;
 
-type MenuItemSpacingType = (typeof menuItemSpacing)[number];
+type MenuActionSpacingType = (typeof menuActionSpacing)[number];
 
 const props = {
   title: {
@@ -16,7 +16,7 @@ const props = {
   },
   spacing: {
     description:
-      "An optional value of type `MenuItemSpacingType` that controls the spacing around the menu item. The default value is `wide`.",
+      "An optional value of type `MenuActionSpacingType` that controls the spacing around the menu item. The default value is `wide`.",
   },
   iconBefore: {
     description:
@@ -32,5 +32,5 @@ const props = {
   },
 };
 
-export { menuItemSpacing, props };
-export type { MenuItemSpacingType };
+export { menuActionSpacing, props };
+export type { MenuActionSpacingType };

@@ -1,8 +1,7 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
-import { tokens } from "../../Menu/Tokens/tokens";
+import { tokens } from "../Tokens/tokens";
 
-const StyledMenuItemContainer = styled(Link)`
+const StyledMenuActionContainer = styled.div`
   display: flex;
   justify-content: space-between;
   text-decoration: none;
@@ -21,4 +20,4 @@ const StyledMenuItemContainer = styled(Link)`
   }
 `;
 
-export { StyledMenuItemContainer };
+export { StyledMenuActionContainer };

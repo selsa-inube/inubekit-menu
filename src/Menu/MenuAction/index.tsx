@@ -1,21 +1,20 @@
 import { Text } from "@inubekit/text";
 import { Icon } from "@inubekit/icon";
 import { Stack } from "@inubekit/stack";
-import { MenuItemSpacingType } from "./props";
-import { StyledMenuItemContainer } from "./styles";
+import { MenuActionSpacingType } from "./props";
+import { StyledMenuActionContainer } from "./styles";
 
-interface IMenuItem {
+interface IMenuAction {
   title: string;
   description?: string;
-  spacing?: MenuItemSpacingType;
+  spacing?: MenuActionSpacingType;
   iconBefore?: React.JSX.Element;
   iconAfter?: React.JSX.Element;
   disabled?: boolean;
-  path?: string;
   onClick?: () => void;
 }
 
-function MenuItem(props: IMenuItem) {
+function MenuAction(props: IMenuAction) {
   const {
     title,
     description,
@@ -23,15 +22,13 @@ function MenuItem(props: IMenuItem) {
     iconBefore,
     iconAfter,
     disabled = false,
-    path = "#",
     onClick,
   } = props;
 
   return (
-    <StyledMenuItemContainer
+    <StyledMenuActionContainer
       $spacing={spacing}
       $disabled={disabled}
-      to={path}
       onClick={onClick}
     >
       <Stack gap="12px" alignItems="center">
@@ -62,9 +59,9 @@ function MenuItem(props: IMenuItem) {
           disabled={disabled}
         />
       )}
-    </StyledMenuItemContainer>
+    </StyledMenuActionContainer>
   );
 }
 
-export { MenuItem };
-export type { IMenuItem };
+export { MenuAction };
+export type { IMenuAction };
