@@ -1,8 +1,8 @@
-import { IMenuItem } from "../MenuLink";
+import { IMenuLink } from "../MenuLink";
 
 interface ISection {
   title?: string;
-  links: IMenuItem[];
+  links: IMenuLink[];
   divider?: boolean;
 }
 
