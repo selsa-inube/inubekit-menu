@@ -1,47 +1,32 @@
 import { MenuHeading } from "../MenuHeading";
-import { MenuLink } from "../MenuLink";
 import { Divider } from "@inubekit/divider";
 import { Stack } from "@inubekit/stack";
-import { ISection } from "./props";
-import { MenuItemSpacingType } from "../MenuUser/props";
 
 interface IMenuSection {
-  sections: ISection[];
-  spacing?: MenuItemSpacingType;
+  title?: string;
+  children: React.ReactNode;
+  divider?: boolean;
+  spacing?: "wide" | "compact";
 }
 
-function MenuSection(props: IMenuSection) {
-  const { sections, spacing = "wide" } = props;
-
+function MenuSection({
+  title,
+  children,
+  divider,
+  spacing = "wide",
+}: IMenuSection) {
   return (
-    <>
-      {sections.map((section, index) => (
-        <Stack key={index} width="312px" direction="column">
-          {section.divider && (
-            <Stack key={index} width="280px" margin="auto" direction="column">
-              <Divider />
-            </Stack>
-          )}
-
-          {section.title && <MenuHeading title={section.title} />}
-          <Stack direction="column" gap={spacing === "compact" ? "4px" : "0px"}>
-            {section.links.map((link, linkIndex) => (
-              <MenuLink
-                key={linkIndex}
-                title={link.title}
-                description={link.description}
-                iconBefore={link.iconBefore}
-                iconAfter={link.iconAfter}
-                disabled={link.disabled}
-                path={link.path}
-                onClick={link.onClick}
-                spacing={spacing}
-              />
-            ))}
-          </Stack>
+    <Stack width="312px" direction="column">
+      {divider && (
+        <Stack width="280px" margin="auto" direction="column">
+          <Divider />
         </Stack>
-      ))}
-    </>
+      )}
+      {title && <MenuHeading title={title} />}
+      <Stack direction="column" gap={spacing === "compact" ? "4px" : "0px"}>
+        {children}
+      </Stack>
+    </Stack>
   );
 }
 

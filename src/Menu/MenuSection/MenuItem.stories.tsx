@@ -1,54 +1,24 @@
 import { StoryFn } from "@storybook/react";
 import { MdAndroid } from "react-icons/md";
 import { BrowserRouter } from "react-router-dom";
-import { MenuSection, IMenuSection } from ".";
-import { ISection, props } from "./props";
-
-const sections: ISection[] = [
-  {
-    title: "Heading 1",
-    links: [
-      {
-        title: "Title",
-        description: "Description",
-        path: "/",
-        iconAfter: <MdAndroid />,
-      },
-      {
-        title: "Title",
-        description: "Description",
-        path: "/",
-        iconAfter: <MdAndroid />,
-      },
-    ],
-    divider: true,
-  },
-  {
-    title: "Heading 2",
-    links: [
-      {
-        title: "Title",
-        description: "Description",
-        path: "/",
-        iconAfter: <MdAndroid />,
-      },
-      {
-        title: "Title",
-        description: "Description",
-        path: "/",
-        iconAfter: <MdAndroid />,
-      },
-    ],
-    divider: true,
-  },
-];
+import { MenuSection } from ".";
+import { MenuAction } from "../MenuAction";
 
 const story = {
   title: "navigation/Menu/MenuSection",
   components: [MenuSection],
   tags: ["autodocs"],
   argTypes: {
-    ...props,
+    spacing: {
+      control: "radio",
+      options: ["wide", "compact"],
+    },
+    divider: {
+      control: "boolean",
+    },
+    title: {
+      control: "text",
+    },
   },
   decorators: [
     (Story: StoryFn) => (
@@ -59,12 +29,25 @@ const story = {
   ],
 };
 
-export const Default: StoryFn<IMenuSection> = (args) => (
-  <MenuSection {...args} />
+export const Default: StoryFn = (args) => (
+  <MenuSection {...args}>
+    <MenuAction
+      title="Title 1"
+      description="Description 1"
+      iconAfter={<MdAndroid />}
+    />
+    <MenuAction
+      title="Title 2"
+      description="Description 2"
+      iconAfter={<MdAndroid />}
+    />
+  </MenuSection>
 );
+
 Default.args = {
-  sections: sections,
+  title: "Heading 1",
   spacing: "wide",
+  divider: true,
 };
 
 export default story;

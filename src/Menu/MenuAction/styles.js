@@ -8,6 +8,7 @@ const StyledMenuActionContainer = styled.div`
   align-items: center;
   height: ${({ $spacing }) => ($spacing === "wide" ? "40px" : "36px")};
   padding: ${({ $spacing }) => ($spacing === "wide" ? "8px 16px" : "4px 16px")};
+  margin-bottom: 6px;
   background-color: ${({ $disabled, theme }) =>
     $disabled &&
     (theme?.menu?.item?.background?.disabled ||
