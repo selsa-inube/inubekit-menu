@@ -11,7 +11,7 @@ interface IMenuAction {
   iconBefore?: React.JSX.Element;
   iconAfter?: React.JSX.Element;
   disabled?: boolean;
-  onClick?: () => void;
+  action?: () => void;
 }
 
 function MenuAction(props: IMenuAction) {
@@ -22,14 +22,14 @@ function MenuAction(props: IMenuAction) {
     iconBefore,
     iconAfter,
     disabled = false,
-    onClick,
+    action,
   } = props;
 
   return (
     <StyledMenuActionContainer
       $spacing={spacing}
       $disabled={disabled}
-      onClick={onClick}
+      action={action}
     >
       <Stack gap="12px" alignItems="center">
         {iconBefore && (

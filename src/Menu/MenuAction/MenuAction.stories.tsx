@@ -28,7 +28,7 @@ Default.args = {
   iconBefore: <MdAndroid />,
   spacing: "wide",
   disabled: false,
-  onClick: () => console.log("MenuAction clicked!"),
+  action: () => console.log("MenuAction clicked!"),
 };
 
 export const IconAfter: StoryFn<IMenuAction> = (args) => (
@@ -40,7 +40,7 @@ IconAfter.args = {
   iconAfter: <MdAndroid />,
   spacing: "wide",
   disabled: false,
-  onClick: () => console.log("MenuAction clicked with iconAfter!"),
+  action: () => console.log("MenuAction clicked with iconAfter!"),
 };
 
 export const Disabled: StoryFn<IMenuAction> = (args) => (
@@ -49,7 +49,7 @@ export const Disabled: StoryFn<IMenuAction> = (args) => (
 Disabled.args = {
   ...Default.args,
   disabled: true,
-  onClick: () => console.log("Disabled action clicked!"),
+  action: () => console.log("Disabled action clicked!"),
 };
 
 export default story;
