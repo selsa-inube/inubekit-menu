@@ -1,3 +1,15 @@
+# v1.11.2 (Sat Oct 05 2024)
+
+#### ⚠️ Pushed to `main`
+
+- fix: update interfaces in order to have common props along components ([@cmarin001](https://github.com/cmarin001))
+
+#### Authors: 1
+
+- Cesar Marin Alfonso ([@cmarin001](https://github.com/cmarin001))
+
+---
+
 # v1.11.1 (Thu Oct 03 2024)
 
 #### ⚠️ Pushed to `main`
