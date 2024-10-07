@@ -12,7 +12,7 @@ interface IMenuLink {
   iconAfter?: React.JSX.Element;
   disabled?: boolean;
   path?: string;
-  onClick?: () => void;
+  action?: () => void;
 }
 
 function MenuLink(props: IMenuLink) {
@@ -24,7 +24,7 @@ function MenuLink(props: IMenuLink) {
     iconAfter,
     disabled = false,
     path = "#",
-    onClick,
+    action,
   } = props;
 
   return (
@@ -32,7 +32,7 @@ function MenuLink(props: IMenuLink) {
       $spacing={spacing}
       $disabled={disabled}
       to={path}
-      onClick={onClick}
+      onClick={action}
     >
       <Stack gap="12px" alignItems="center">
         {iconBefore && (
