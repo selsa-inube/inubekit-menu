@@ -29,7 +29,7 @@ function MenuAction(props: IMenuAction) {
     <StyledMenuActionContainer
       $spacing={spacing}
       $disabled={disabled}
-      action={action}
+      onClick={action}
     >
       <Stack gap="12px" alignItems="center">
         {iconBefore && (
