@@ -1,3 +1,15 @@
+# v1.11.3 (Mon Oct 07 2024)
+
+#### ⚠️ Pushed to `main`
+
+- feat: extend component to get a ref ([@cmarin001](https://github.com/cmarin001))
+
+#### Authors: 1
+
+- Cesar Marin Alfonso ([@cmarin001](https://github.com/cmarin001))
+
+---
+
 # v1.11.2 (Sat Oct 05 2024)
 
 #### ⚠️ Pushed to `main`
