@@ -12,3 +12,4 @@ export type { IMenuAction } from "./Menu/MenuAction";
 export type { MenuLinkSpacingType } from "./Menu/MenuLink/props";
 export type { MenuActionSpacingType } from "./Menu/MenuAction/props";
 export type { ISection } from "./Menu/MenuSection/props";
+export { tokens as MenuTokens } from "./Menu/Tokens/tokens";
