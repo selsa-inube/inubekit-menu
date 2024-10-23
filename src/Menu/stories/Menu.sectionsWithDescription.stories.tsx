@@ -29,7 +29,7 @@ const story = {
 export const sectionsWithDescription: StoryFn = () => (
   <Menu>
     <MenuUser userName="Leonardo Garzon" businessUnit="Fondecom" avatar />
-    <MenuSection title="ACTIONS" divider spacing="wide">
+    <MenuSection title="ACTIONS" divider={true}>
       <MenuLink
         title="Create"
         description="Create an incident and connect with Fondecom"
@@ -43,7 +43,7 @@ export const sectionsWithDescription: StoryFn = () => (
         iconBefore={<MdOutlineCreate />}
       />
     </MenuSection>
-    <MenuSection title="OPTIONS" divider spacing="wide">
+    <MenuSection title="OPTIONS" divider={true}>
       <MenuLink
         title="Unlock"
         description="Unlock new benefits to create more than one incident at a time"
@@ -57,8 +57,12 @@ export const sectionsWithDescription: StoryFn = () => (
         iconBefore={<MdOutlineColorLens />}
       />
     </MenuSection>
-    <MenuSection divider spacing="wide">
-      <MenuAction title="Logout" iconBefore={<MdLogout />} />
+    <MenuSection divider={true}>
+      <MenuAction
+        title="Logout"
+        iconBefore={<MdLogout />}
+        action={() => console.log("logout")}
+      />
     </MenuSection>
   </Menu>
 );

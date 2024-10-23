@@ -21,14 +21,23 @@ const story = {
 export const withoutIcons: StoryFn = () => (
   <Menu>
     <MenuUser userName="Name" businessUnit="Business Unit" avatar />
-    <MenuSection divider spacing="wide">
-      <MenuAction title="Show the nearest calendar" />
-      <MenuAction title="Add a secondary incident" />
-      <MenuAction title="Link a new issue " />
+    <MenuSection divider={true}>
+      <MenuAction
+        title="Show the nearest calendar"
+        action={() => console.log("action")}
+      />
+      <MenuAction
+        title="Add a secondary incident"
+        action={() => console.log("action")}
+      />
+      <MenuAction
+        title="Link a new issue "
+        action={() => console.log("action")}
+      />
     </MenuSection>
 
-    <MenuSection divider spacing="wide">
-      <MenuAction title="Logout" />
+    <MenuSection divider={true}>
+      <MenuAction title="Logout" action={() => console.log("action")} />
     </MenuSection>
   </Menu>
 );

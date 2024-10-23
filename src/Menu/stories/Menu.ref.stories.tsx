@@ -52,7 +52,7 @@ export const RefStory: StoryFn = () => {
       {isMenuOpen && (
         <Menu ref={menuRef}>
           <MenuUser userName="Name" businessUnit="Business Unit" avatar />
-          <MenuSection divider spacing="wide">
+          <MenuSection divider>
             <MenuLink
               title="Profile"
               path="/profile"
@@ -64,7 +64,7 @@ export const RefStory: StoryFn = () => {
               iconBefore={<MdOutlineMarkunreadMailbox />}
             />
           </MenuSection>
-          <MenuSection divider spacing="wide">
+          <MenuSection divider>
             <MenuLink
               title="Settings"
               path="/settings"
@@ -76,8 +76,12 @@ export const RefStory: StoryFn = () => {
               iconBefore={<MdHelpOutline />}
             />
           </MenuSection>
-          <MenuSection divider spacing="wide">
-            <MenuAction title="Logout" iconBefore={<MdLogout />} />
+          <MenuSection divider>
+            <MenuAction
+              title="Logout"
+              iconBefore={<MdLogout />}
+              action={() => console.log("logout")}
+            />
           </MenuSection>
         </Menu>
       )}
