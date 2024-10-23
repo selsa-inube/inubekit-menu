@@ -6,26 +6,18 @@ interface IMenuSection {
   title?: string;
   children: React.ReactNode;
   divider?: boolean;
-  spacing?: "wide" | "compact";
 }
 
-function MenuSection({
-  title,
-  children,
-  divider,
-  spacing = "wide",
-}: IMenuSection) {
+function MenuSection({ title, children, divider }: IMenuSection) {
   return (
-    <Stack width="312px" direction="column">
+    <Stack direction="column">
       {divider && (
-        <Stack width="280px" margin="auto" direction="column">
+        <Stack width="calc(100% - 32px)" margin="4px auto">
           <Divider />
         </Stack>
       )}
       {title && <MenuHeading title={title} />}
-      <Stack direction="column" gap={spacing === "compact" ? "4px" : "0px"}>
-        {children}
-      </Stack>
+      <Stack direction="column">{children}</Stack>
     </Stack>
   );
 }
