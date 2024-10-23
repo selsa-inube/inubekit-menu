@@ -1,3 +1,15 @@
+# v2.0.0 (Wed Oct 23 2024)
+
+#### 💥 Breaking Change
+
+- Fcanas/adjust menu styles [#19](https://github.com/selsa-inube/inubekit-menu/pull/19) ([@wfercanas](https://github.com/wfercanas))
+
+#### Authors: 1
+
+- Fernando Cañas ([@wfercanas](https://github.com/wfercanas))
+
+---
+
 # v1.11.5 (Thu Oct 10 2024)
 
 #### ⚠️ Pushed to `main`
