@@ -32,14 +32,16 @@ const story = {
 export const Default: StoryFn = (args) => (
   <MenuSection {...args}>
     <MenuAction
-      title="Title 1"
-      description="Description 1"
+      title="Configuration"
+      description="Adjust the details of your project"
       iconAfter={<MdAndroid />}
+      action={() => console.log("config")}
     />
     <MenuAction
-      title="Title 2"
-      description="Description 2"
+      title="Account"
+      description="See your personal settings"
       iconAfter={<MdAndroid />}
+      action={() => console.log("account")}
     />
   </MenuSection>
 );

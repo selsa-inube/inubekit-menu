@@ -1,65 +1,22 @@
-import { Text } from "@inubekit/text";
-import { Icon } from "@inubekit/icon";
-import { Stack } from "@inubekit/stack";
-import { MenuActionSpacingType } from "./props";
-import { StyledMenuActionContainer } from "./styles";
+import { IMenuItem, MenuItem } from "../MenuItem";
 
-interface IMenuAction {
-  title: string;
-  description?: string;
-  spacing?: MenuActionSpacingType;
-  iconBefore?: React.JSX.Element;
-  iconAfter?: React.JSX.Element;
-  disabled?: boolean;
-  action?: () => void;
+interface IMenuAction extends IMenuItem {
+  action: () => void;
 }
 
 function MenuAction(props: IMenuAction) {
-  const {
-    title,
-    description,
-    spacing = "wide",
-    iconBefore,
-    iconAfter,
-    disabled = false,
-    action,
-  } = props;
+  const { action, disabled } = props;
+
+  function handleClick() {
+    if (action && !disabled) {
+      action();
+    }
+  }
 
   return (
-    <StyledMenuActionContainer
-      $spacing={spacing}
-      $disabled={disabled}
-      onClick={action}
-    >
-      <Stack gap="12px" alignItems="center">
-        {iconBefore && (
-          <Icon
-            icon={iconBefore}
-            spacing="narrow"
-            size="24px"
-            appearance="dark"
-            disabled={disabled}
-          />
-        )}
-        <Stack direction="column" gap="4px">
-          <Text type="label" size="large" disabled={disabled} weight="bold">
-            {title}
-          </Text>
-          <Text type="body" size="small" appearance="gray" disabled={disabled}>
-            {description}
-          </Text>
-        </Stack>
-      </Stack>
-      {iconAfter && (
-        <Icon
-          icon={iconAfter}
-          spacing="narrow"
-          size="24px"
-          appearance="dark"
-          disabled={disabled}
-        />
-      )}
-    </StyledMenuActionContainer>
+    <div onClick={handleClick}>
+      <MenuItem {...props} />
+    </div>
   );
 }
 

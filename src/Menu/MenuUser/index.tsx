@@ -1,25 +1,34 @@
 import { Stack } from "@inubekit/stack";
 import { Text } from "@inubekit/text";
 import { Avatar } from "@inubekit/avatar";
-import { StyledUser } from "./styles";
+import { Grid } from "@inubekit/grid";
 
 interface IMenuUser {
   userName: string;
   businessUnit?: string;
   avatar?: boolean;
+  padding?: string;
+  gap?: string;
 }
 
 function MenuUser(props: IMenuUser) {
-  const { userName, businessUnit, avatar = true } = props;
+  const {
+    userName,
+    businessUnit,
+    avatar = true,
+    padding = "12px 16px",
+    gap = "12px",
+  } = props;
 
   return (
-    <StyledUser>
-      {avatar && (
-        <Stack direction="column" justifyContent="center" alignItems="center">
-          <Avatar />
-        </Stack>
-      )}
-      <Stack direction="column" justifyContent="center">
+    <Grid
+      templateColumns={avatar ? "auto 1fr" : "1fr"}
+      gap={gap}
+      padding={padding}
+      alignItems="center"
+    >
+      {avatar && <Avatar />}
+      <Stack direction="column">
         <Text type="body" size="medium">
           {userName}
         </Text>
@@ -27,7 +36,7 @@ function MenuUser(props: IMenuUser) {
           {businessUnit}
         </Text>
       </Stack>
-    </StyledUser>
+    </Grid>
   );
 }
 

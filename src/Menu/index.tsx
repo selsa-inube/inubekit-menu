@@ -1,14 +1,19 @@
 import React, { forwardRef } from "react";
-import { StyledMenuContainer } from "./styles";
+import { StyledMenu } from "./styles";
 
 interface IMenu {
   children: React.ReactNode;
+  width?: string;
 }
 
 const Menu = forwardRef<HTMLDivElement, IMenu>((props, ref) => {
-  const { children } = props;
+  const { children, width = "fit-content" } = props;
 
-  return <StyledMenuContainer ref={ref}>{children}</StyledMenuContainer>;
+  return (
+    <StyledMenu ref={ref} $width={width}>
+      {children}
+    </StyledMenu>
+  );
 });
 
 export { Menu };

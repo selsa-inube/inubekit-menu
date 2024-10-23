@@ -22,8 +22,12 @@ const story = {
 export const Default: StoryFn = () => (
   <Menu>
     <MenuUser userName="Name" businessUnit="Business Unit" avatar />
-    <MenuSection divider spacing="wide">
-      <MenuAction title="Logout" iconBefore={<MdLogout />} />
+    <MenuSection divider={true}>
+      <MenuAction
+        title="Logout"
+        iconBefore={<MdLogout />}
+        action={() => console.log("logout")}
+      />
     </MenuSection>
   </Menu>
 );

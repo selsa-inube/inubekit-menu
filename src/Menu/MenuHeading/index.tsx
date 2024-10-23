@@ -11,6 +11,7 @@ function MenuHeading(props: IMenuHeading) {
     <Text
       type="title"
       size="small"
+      weight="bold"
       appearance="gray"
       padding="16px 16px 8px 16px"
     >

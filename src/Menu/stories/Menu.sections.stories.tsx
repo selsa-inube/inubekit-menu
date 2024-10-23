@@ -29,7 +29,7 @@ const story = {
 export const sections: StoryFn = () => (
   <Menu>
     <MenuUser userName="Name" businessUnit="Business Unit" avatar />
-    <MenuSection divider spacing="wide">
+    <MenuSection divider={true}>
       <MenuLink
         title="Profile"
         path="/profile"
@@ -41,7 +41,7 @@ export const sections: StoryFn = () => (
         iconBefore={<MdOutlineMarkunreadMailbox />}
       />
     </MenuSection>
-    <MenuSection divider spacing="wide">
+    <MenuSection divider={true}>
       <MenuLink
         title="Settings"
         path="/settings"
@@ -49,8 +49,12 @@ export const sections: StoryFn = () => (
       />
       <MenuLink title="Help" path="/help" iconBefore={<MdHelpOutline />} />
     </MenuSection>
-    <MenuSection divider spacing="wide">
-      <MenuAction title="Logout" iconBefore={<MdLogout />} />
+    <MenuSection divider={true}>
+      <MenuAction
+        title="Logout"
+        iconBefore={<MdLogout />}
+        action={() => console.log("logout")}
+      />
     </MenuSection>
   </Menu>
 );

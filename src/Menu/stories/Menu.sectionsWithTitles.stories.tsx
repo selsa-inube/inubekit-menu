@@ -29,7 +29,7 @@ const story = {
 export const sectionsWithTitles: StoryFn = () => (
   <Menu>
     <MenuUser userName="Name" businessUnit="Business Unit" avatar />
-    <MenuSection title="ADMINISTRATE" divider spacing="wide">
+    <MenuSection title="ADMINISTRATE" divider={true}>
       <MenuLink
         title="My savings"
         path="/my-savings"
@@ -41,7 +41,7 @@ export const sectionsWithTitles: StoryFn = () => (
         iconBefore={<MdOutlineAccountBalance />}
       />
     </MenuSection>
-    <MenuSection title="REQUEST" divider spacing="wide">
+    <MenuSection title="REQUEST" divider={true}>
       <MenuLink
         title="Savings"
         path="/savings"
@@ -49,8 +49,12 @@ export const sectionsWithTitles: StoryFn = () => (
       />
       <MenuLink title="Credit" path="/credit" iconBefore={<MdAttachMoney />} />
     </MenuSection>
-    <MenuSection divider spacing="wide">
-      <MenuAction title="Logout" iconBefore={<MdLogout />} />
+    <MenuSection divider={true}>
+      <MenuAction
+        title="Logout"
+        iconBefore={<MdLogout />}
+        action={() => console.log("logout")}
+      />
     </MenuSection>
   </Menu>
 );

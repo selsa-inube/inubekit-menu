@@ -24,6 +24,8 @@ Default.args = {
   userName: "Name",
   businessUnit: "Business Unit",
   avatar: true,
+  padding: "12px 16px",
+  gap: "12px",
 };
 
 export default story;

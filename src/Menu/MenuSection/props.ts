@@ -1,19 +1,7 @@
-import { IMenuLink } from "../MenuLink";
-
-interface ISection {
-  title?: string;
-  links: IMenuLink[];
-  divider?: boolean;
-}
-
 const props = {
   sections: {
     description:
       "This is an array of objects. Each object represents a section in the menu. It contains a 'title' and an array of 'links'. Each 'link' is an object that represents a menu item. It contains properties like 'title', 'description', 'iconBefore', 'iconAfter', 'isDisabled', and 'path'.",
-  },
-  spacing: {
-    description:
-      "This prop determines the spacing between the menu items. It can be set to 'wide' or 'compact'. The default value is 'wide'.",
   },
   divider: {
     description:
@@ -22,4 +10,3 @@ const props = {
 };
 
 export { props };
-export type { ISection };
